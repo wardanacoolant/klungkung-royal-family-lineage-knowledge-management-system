@@ -1,0 +1,11 @@
+select distinct ?property ?subject where {
+		  ?subject ?property sils:GenI .
+		}
+
+
+[siapa orang yg gen I berkasta ksatria]
+SELECT DISTINCT (?orang as ?output) where { ?orang rdf:type sils:Nama_Lengkap . ?orang sil:merupakanGenerasiKe sils:GenI . ?orang sil:memilikiKasta sil:Ksatria . } ORDER BY ?output
+
+
+[siapa orang yg gen XIV tinggal di Puri Kaleran]
+SELECT DISTINCT (?orang as ?output) where { ?orang rdf:type sils:Nama_Lengkap . ?orang sil:merupakanGenerasiKe sils:GenXIV . ?orang sil:memilikiTempatTinggal sils:Pr._Kaleran . } ORDER BY ?output
